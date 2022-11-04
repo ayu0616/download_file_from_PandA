@@ -1,4 +1,5 @@
 import os
+import sys
 import urllib.parse
 
 from panda_session import PandaSession
@@ -35,6 +36,9 @@ def input_url():
     url = input("please enter a url => ").strip()
     return url
 
+
+for url in sys.argv:
+    download(url)
 
 url = input_url()
 while url:
