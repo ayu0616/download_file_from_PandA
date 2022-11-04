@@ -37,8 +37,9 @@ def input_url():
     return url
 
 
-for url in sys.argv:
-    download(url)
+if len(sys.argv) >= 2:
+    for url in sys.argv[1:]:
+        download(url)
 
 url = input_url()
 while url:
